@@ -35,9 +35,9 @@ Fonte: https://www.redhat.com/en/blog/Linux-file-navigation-commands
 - `mkdir` = make directory
 - `rmdir` = remove directory (somente se vazio)
 
-- rm -r <nome da pasta no diretório> = limpar arquivos de pasta
+- `rm -r <nome da pasta no diretório>` = limpar arquivos de pasta
 
-- pip freeze | grep -v "^-e" | xargs pip uninstall -y = Limpar todas dependências
+- `pip freeze | grep -v "^-e" | xargs pip uninstall -y` = Limpar todas dependências
 
 # Padrões de Commits: 
 Fonte: https://github.com/iuricode/padroes-de-commits
