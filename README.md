@@ -1,7 +1,5 @@
 # Projeto Git
-Este é um teste de utilização de comandos Git, realizar versionamento conexão do VS Code ao GitHub através de chave SSH.
-Arquivo .env não deveria ter ido no commit, mas valeu como teste.
-
+Este é um teste de utilização de comandos Git, realizar versionamento conexão do VSCode ao GitHub através de chave SSH.
 
 ### Configurar SSH (na primeira vez):
 Fonte: https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Workshop%20-%20Git%20e%20Github/Aula_02
@@ -24,20 +22,50 @@ Fonte: https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Workshop%2
 
 - `git push -u origin main` = Enviar o código
 # Comandos bash/powershell/linux
-Fonte: https://www.redhat.com/en/blog/Linux-file-navigation-commands
+Fonte: https://www.redhat.com/en/blog/Linux-file-navigation-commands, 
+Powershell Cheat Sheet: https://download.microsoft.com/download/2/1/2/2122f0b9-0ee6-4e6d-bfd6-f9dcd27c07f9/ws12_quickref_download_files/powershell_langref_v3.pdf
 
-- `pwd` (present working directory) = diretório atual
-- `tree` = mostra diretório em forma gráfica
-- `cd` "diretório" = (change directory) = mover-se para novo diretório
+- `pwd` (present working directory) = mostrar diretório atual
+- `tree` = mostrar diretório em forma gráfica
+- `ls` (list) = mostrar os arquivos não ocultos
+- `ls -al` (list all) = mostrar todos
+
+- `cd` "diretório" (change directory) = navegar para novo diretório
 - `cd /c:/User/xxx/Documents/Projetos` = mover-se diretamente para diretório
-- `cd ..` = ir para uma pasta acima
+- `cd ..` = ir para a pasta um nível acima
 
-- `mkdir` = make directory
-- `rmdir` = remove directory (somente se vazio)
+- `mkdir` (make directory) = criar uma pasta
+
+- `rmdir` (remove directory) = excluir uma pasta (somente se vazio)
+
+- `touch <nome do documento>` = criar documento
 
 - `rm -r <nome da pasta no diretório>` = limpar arquivos de pasta
 
 - `pip freeze | grep -v "^-e" | xargs pip uninstall -y` = Limpar todas dependências
+
+- `code .` = Abrir VSCode
+
+# Comandos Git
+- `git status` = Status atual
+- `git log` = Mostrar histórico de commits com seus hashes (código de identificação)
+
+- `git -rm cached <nome do arquivo:` = Retirar o arquivo de staged (com git add)
+- `git restore ...` = Retorna à última versão do arquivo
+- `git restore --staged ...` = Retira documentos staged (com git add) e se torna untracked novmaente
+
+- `git commit -m "mensagem"` = Salvar no git local a versão criando um hash
+- `git commit --amend` = Reescrever última mensagem do commit
+- `git checkout (hash do commit)` = Ver outra versão daquele commit através so hash
+
+- `git branch`= Ver o nome das ramificações do projeto
+- `git checkout <nome do branch>` = Mudar para outra branch
+
+# Mostrar arquivos ocultos VSCode
+- vá em Settings 
+- Busque pelo menu de Exclude 
+- Escolha os arquivos que você queiraver/ocultar arquivos ocultos (.git, por exemplo)
+
 
 # Padrões de Commits: 
 Fonte: https://github.com/iuricode/padroes-de-commits
