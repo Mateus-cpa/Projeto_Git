@@ -1,20 +1,31 @@
 # Projeto Git
 Este é um teste de utilização de comandos Git, realizar versionamento conexão do VSCode ao GitHub através de chave SSH.
 
-### Configurar SSH (na primeira vez):
+## Configurar SSH (na primeira vez):
 Fonte: https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Workshop%20-%20Git%20e%20Github/Aula_02
 
-### 1. Criar ambiente virtual:
+## 1. Criar nova pasta com .venv
+### 1.1. Criar ambiente virtual:
 - python -m venv .venv
 
-### 2. Ativar:
+### 1.2. Ativar:
 - source .venv/Scripts/activate
 
-### 3. Instalar bibliotecas
+### 1.3. Instalar bibliotecas
 - pip install `biblioteca`
 
-### 4. Desativar (se quiser, quando terminar):
+### 1.4. Desativar (se quiser, quando terminar):
 - deactivate
+
+## 2. Criar nova pasta com Poetry
+
+### 2.1. Definir a versao do Python 
+- `pyenv local 3.12.1`
+- `poetry env use 3.12.1`
+- `poetry install --no-root`
+- `poetry lock --no-update`
+
+- Execute o comando: `python src/create_measurements.py` para gerar o arquivo de teste
 
 ### Repositório github
 - Criar em "new repository" no github
