@@ -31,7 +31,16 @@ Fonte: https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Workshop%2
 - Criar em "new repository" no github
 - `git remote add origin https://github.com/usuario/repo.git` = Vincular pasta aberta no VSCode ao repositório do github
 
+## 1. Enviar para seu repositório
 - `git push -u origin main` = Enviar o código
+
+## 2. Enviar para um repositório clonado
+- `git remote -v` = verifica os repositórios possíveis apontados
+- `git remote add new-remote <new_repository_url>` = adiciona novo destino de repositório
+- `git push new-remote <branch_name>` = envia para novo destino
+
+
+
 # Comandos bash/powershell/linux
 Fonte: https://www.redhat.com/en/blog/Linux-file-navigation-commands, 
 Powershell Cheat Sheet: https://download.microsoft.com/download/2/1/2/2122f0b9-0ee6-4e6d-bfd6-f9dcd27c07f9/ws12_quickref_download_files/powershell_langref_v3.pdf
@@ -71,6 +80,7 @@ Powershell Cheat Sheet: https://download.microsoft.com/download/2/1/2/2122f0b9-0
 
 - `git branch`= Ver o nome das ramificações do projeto
 - `git checkout <nome do branch>` = Mudar para outra branch
+
 
 # Mostrar arquivos ocultos VSCode
 - vá em Settings 
