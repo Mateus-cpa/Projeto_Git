@@ -31,10 +31,10 @@ Fonte: https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Workshop%2
 - Criar em "new repository" no github
 - `git remote add origin https://github.com/usuario/repo.git` = Vincular pasta aberta no VSCode ao repositório do github
 
-## 1. Enviar para seu repositório
+#### 1. Enviar para seu repositório
 - `git push -u origin main` = Enviar o código
 
-## 2. Enviar para um repositório clonado
+### 2. Enviar para um repositório clonado
 - `git remote -v` = verifica os repositórios possíveis apontados
 - `git remote add new-remote <new_repository_url>` = adiciona novo destino de repositório
 - `git push new-remote <branch_name>` = envia para novo destino
