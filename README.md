@@ -6,13 +6,13 @@ Fonte: https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Workshop%2
 
 ## 1. Criar nova pasta com .venv
 ### 1.1. Criar ambiente virtual:
-- python -m venv .venv
+- `python -m venv .venv`
 
 ### 1.2. Ativar:
-- source .venv/Scripts/activate
+-em bash (não powershell): `source .venv/Scripts/activate`
 
 ### 1.3. Instalar bibliotecas
-- pip install `biblioteca`
+- `pip install biblioteca`
 
 ### 1.4. Desativar (se quiser, quando terminar):
 - deactivate
