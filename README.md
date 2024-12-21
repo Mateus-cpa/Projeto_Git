@@ -25,7 +25,8 @@ Fonte: https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Workshop%2
 - `poetry install --no-root`
 - `poetry lock --no-update`
 
-- Execute o comando: `python src/create_measurements.py` para gerar o arquivo de teste
+- Gere o arquivo `.gitignore` e coloque os arquivos que não serão adicionados ao Git. Sugestões: https://www.toptal.com/developers/gitignore/api/python
+
 
 ### Repositório github
 - Criar em "new repository" no github
@@ -72,7 +73,7 @@ Powershell Cheat Sheet: https://download.microsoft.com/download/2/1/2/2122f0b9-0
 
 - `git -rm cached <nome do arquivo:` = Retirar o arquivo de staged (com git add)
 - `git restore ...` = Retorna à última versão do arquivo
-- `git restore --staged ...` = Retira documentos staged (com git add) e se torna untracked novmaente
+- `git restore --staged ...` = Retira documentos staged (com git add) e se torna untracked novamente
 
 - `git commit -m "mensagem"` = Salvar no git local a versão criando um hash
 - `git commit --amend` = Reescrever última mensagem do commit
