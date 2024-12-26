@@ -6,21 +6,22 @@ Fonte: https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Workshop%2
 
 ## 1. Criar nova pasta com .venv
 
-### 1.1. Criar ambiente virtual:
-- `python -m venv .venv`
-
-### 1.2. Ativar:
--em bash (não powershell): `source .venv/Scripts/activate`
-
-
-### 1.3. Configurar versões de Python
+### 1.1. Configurar versões de Python
 - `pyenv versions`: verificar versões instaladas
 - `pyenv install <versão>`: instalar versão de python
 - `pyenv global <versão>`: configurar versão global de python para todos Projetos
+- `pip freeze | grep -v "^-e" | xargs pip uninstall -y`: limpa o pip list
+
+### 1.2. Criar ambiente virtual:
+- `python -m venv .venv`: utiliza o comando python "-m" (módulo) ".venv". 
+Após este comando, a pasta .venv aparecerá.
+
+### 1.3. Ativar em Windows:
+-em bash (não powershell): `source .venv/Scripts/activate`
 
 ### 1.4. Configuração da pasta
 - `pyenv local <versão>`: para configurar a versão python da pasta (arquivo `.python-version`) - escolher a versão mais moderna da biblioteca que você quer trabalhar
-- `pip list`: visualizar dependências
+- `pip list`: visualizar dependências instaladas
 
 ### 1.5. Instalar bibliotecas
 - `pip install biblioteca`
