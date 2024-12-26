@@ -5,21 +5,36 @@ Este é um teste de utilização de comandos Git, realizar versionamento conexã
 Fonte: https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Workshop%20-%20Git%20e%20Github/Aula_02
 
 ## 1. Criar nova pasta com .venv
+
 ### 1.1. Criar ambiente virtual:
 - `python -m venv .venv`
 
 ### 1.2. Ativar:
 -em bash (não powershell): `source .venv/Scripts/activate`
 
-### 1.3. Instalar bibliotecas
+
+### 1.3. Configurar versões de Python
+- `pyenv versions`: verificar versões instaladas
+- `pyenv install <versão>`: instalar versão de python
+- `pyenv global <versão>`: configurar versão global de python para todos Projetos
+
+### 1.4. Configuração da pasta
+- `pyenv local <versão>`: para configurar a versão python da pasta (arquivo `.python-version`) - escolher a versão mais moderna da biblioteca que você quer trabalhar
+- `pip list`: visualizar dependências
+
+### 1.5. Instalar bibliotecas
 - `pip install biblioteca`
 
-### 1.4. Desativar (se quiser, quando terminar):
+### 1.6. Desativar (se quiser, quando terminar):
 - deactivate
 
-## 2. Criar nova pasta com Poetry
+## 2.a. Configurar com Poetry
+- Criar o arquivo `pyproject.toml` com as dependências (procurar um modelo)
+- Abrir pasta no git bash
+- Criar pasta com `poetry install`
+- ativar venv com `poetry shell`
 
-### 2.1. Definir a versao do Python 
+### 2.b. Definir a versão do Python 
 - `pyenv local 3.12.1`
 - `poetry env use 3.12.1`
 - `poetry install --no-root`
