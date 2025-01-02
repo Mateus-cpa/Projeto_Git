@@ -87,7 +87,7 @@ Powershell Cheat Sheet: https://download.microsoft.com/download/2/1/2/2122f0b9-0
 - `git status` = Status atual
 - `git log` = Mostrar histórico de commits com seus hashes (código de identificação)
 
-- `git -rm cached <nome do arquivo:` = Retirar o arquivo de staged (com git add)
+- `git rm --cached <nome do arquivo>` = Retirar o arquivo de staged (com git add)
 - `git restore ...` = Retorna à última versão do arquivo
 - `git restore --staged ...` = Retira documentos staged (com git add) e se torna untracked novamente
 
@@ -97,6 +97,9 @@ Powershell Cheat Sheet: https://download.microsoft.com/download/2/1/2/2122f0b9-0
 
 - `git branch`= Ver o nome das ramificações do projeto
 - `git checkout <nome do branch>` = Mudar para outra branch
+
+- `git log --follow <nome_do_arquivo>` = ver histórico de o código hash com datas e usuários
+- `git checkout <hash_do_commit> -- <nome_do_arquivo>` = recuperar arquivo específico para versão do hash indicado
 
 
 # Mostrar arquivos ocultos VSCode
