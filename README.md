@@ -96,7 +96,7 @@ Powershell Cheat Sheet: https://download.microsoft.com/download/2/1/2/2122f0b9-0
 - `code .` = Abrir VSCode
 
 # Comandos Git
-![Estágios Git](.docs\Git stages.png)
+![Estágios Git](docs/Git%20stages.png)
 
 
 ## Criar git
