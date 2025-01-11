@@ -26,7 +26,7 @@ Fonte: https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Workshop%2
 - `cd <nome da pasta criada>`: abre pasta que você criou.
 - Não fechar janela durante a configuração do GitHub.
 
-## 2.  No GitHub
+## 2. No GitHub
 - Criar Repositório.
 - Copiar o código gerado no Github para configurar a pasta, desde `echo` at[e `main`.
 - Neste código você estará:
@@ -64,9 +64,7 @@ c. Escolha os arquivos que você queira ver/ocultar arquivos ocultos (.git, por 
 - Sugestões: .venv e outros arquivos de interesse.
 
 
-### Repositório github
-- Criar em "new repository" no github
-- `git remote add origin https://github.com/usuario/repo.git` = Vincular pasta aberta no VSCode ao repositório do github
+
 
 
 
@@ -98,9 +96,12 @@ Powershell Cheat Sheet: https://download.microsoft.com/download/2/1/2/2122f0b9-0
 - `code .` = Abrir VSCode
 
 # Comandos Git
+![Estágios Git](.docs\Git stages.png)
+
+
 ## Criar git
 - `git clone` = copiar projeto do Github
-- `git init` = criar novo do zero
+- `git init` = criar novo
 
 ## Status
 - `git status` = Status atual
