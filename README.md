@@ -1,46 +1,65 @@
 # Projeto Git
-Este é um teste de utilização de comandos Git, realizar versionamento conexão do VSCode ao GitHub através de chave SSH.
+Este é um passo a passo para de utilização de comandos Git, realizar versionamento conexão do VSCode ao GitHub através de chave SSH.
 
-## Configurar SSH (na primeira vez):
+## `SETUP DO COMPUTADOR` (somente na primeira vez)
+
+### 0.1. Instalar Git no COMPUTADOR
+
+### 0.2. Instalar Python
+
+### 0.3. Instalar pipx e poetry
+
+### 0.4. Configurar SSH do Git Hub
 Fonte: https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Workshop%20-%20Git%20e%20Github/Aula_02
 
-## 1. Criar nova pasta com .venv
 
-### 1.1. Configurar versões de Python
+### 0.4. Configurar versões de Python
 - `pyenv versions`: verificar versões instaladas
 - `pyenv install <versão>`: instalar versão de python
 - `pyenv global <versão>`: configurar versão global de python para todos Projetos
 - `pip freeze | grep -v "^-e" | xargs pip uninstall -y`: limpa o pip list
 
-### 1.2. Criar ambiente virtual:
-- `python -m venv .venv`: utiliza o comando python "-m" (módulo) ".venv". 
-Após este comando, a pasta .venv aparecerá.
+## `SETUP DO PROJETO`
+## 1. No terminal Bash (caso seja a primeira vez)
+- Navegar até a pasta onde será criada a pasta utilizando comandos 'cd'. Você pode iniciar utilizando a pasta 'cd ~' para navegar para o PATH que você configurou nas variáveis de ambiente.
+- `mkdir <nome da nova pasta>`: se for criar pasta nova.
+- `cd <nome da pasta criada>`: abre pasta que você criou.
+- Não fechar janela durante a configuração do GitHub.
 
-### 1.3. Ativar em Windows:
--em bash (não powershell): `source .venv/Scripts/activate`
+## 2.  No GitHub
+- Criar Repositório.
+- Copiar o código gerado no Github para configurar a pasta, desde `echo` at[e `main`.
+- Neste código você estará:
+1. Incluindo o Título no README.md;
+2. Iniciando Git
+3. Adicionando README no status staged
+4. Comprometendo git local (commit) com a mensagem 'first commit'
+5. Definindo a branch com o nome `main`
+6. Apontando seu projeto ao repositório remoto Githhub que você criou neste passo
+7. Enviando arquivos comprometidos ao git remoto criado no Github.
 
-### 1.4. Configuração da pasta
-- `pyenv local <versão>`: para configurar a versão python da pasta (arquivo `.python-version`) - escolher a versão mais moderna da biblioteca que você quer trabalhar
-- `pip list`: visualizar dependências instaladas
+## 3. De volta do Git Bash:
+- Colar o código
+- `code .`: para abrir a IDE VSCode já configurado.
+- Na pasta inicial já virão criados a pasta <span style="background-color:rgba(235, 235, 139, 0.55)">.git</span> e o arquivo Markdown <span style="background-color:rgba(235, 235, 139, 0.55)">*README.md*</span>.
+- Pastas iniciadas com '.' são ocultas, caso seu VSCode não as mostre, configure-o da seguinte forma:
+a. Vá em Settings 
+b. Busque pelo menu de Exclude 
+c. Escolha os arquivos que você queira ver/ocultar arquivos ocultos (.git, por exemplo)
 
-### 1.5. Instalar bibliotecas
-- `pip install biblioteca`
+## 4. No Terminal do VSCode 
+- Alterar terminal de PowerShell para Bash, caso já não esteja.
 
-### 1.6. Desativar (se quiser, quando terminar):
-- deactivate
+### 4.1. Configurar pyenv local
+- `pyenv local <versão>`: para configurar a versão python da pasta, criando o arquivo <span style="background-color:rgba(235, 235, 139, 0.55)">.python-version</span> 
+- escolher a versão mais moderna da biblioteca que você quer trabalhar
 
-## 2.a. Configurar com Poetry
-- Criar o arquivo `pyproject.toml` com as dependências (procurar um modelo)
-- Abrir pasta no git bash
-- Criar pasta com `poetry install`
-- ativar venv com `poetry shell`
+### 4.2. Configurar poetry
+- `poetry init`: cria o arquivo <span style="background-color:rgba(235, 235, 139, 0.55)">pyproject.toml</span> e a pasta <span style="background-color:rgba(235, 235, 139, 0.55)">.venv</span>'
+- `poetry env use <versão python do pyenv local>`
+- `poetry shell`
 
-### 2.b. Definir a versão do Python 
-- `pyenv local 3.12.1`
-- `poetry env use 3.12.1`
-- `poetry install --no-root`
-- `poetry lock --no-update`
-
+### 4.3. Git ignore
 - Gere o arquivo `.gitignore` e coloque os arquivos que não serão adicionados ao Git. Sugestões: https://www.toptal.com/developers/gitignore/api/python
 
 
@@ -48,13 +67,7 @@ Após este comando, a pasta .venv aparecerá.
 - Criar em "new repository" no github
 - `git remote add origin https://github.com/usuario/repo.git` = Vincular pasta aberta no VSCode ao repositório do github
 
-#### 1. Enviar para seu repositório
-- `git push -u origin main` = Enviar o código
 
-### 2. Enviar para um repositório clonado
-- `git remote -v` = verifica os repositórios possíveis apontados
-- `git remote add new-remote <new_repository_url>` = adiciona novo destino de repositório
-- `git push new-remote <branch_name>` = envia para novo destino
 
 
 
@@ -84,28 +97,48 @@ Powershell Cheat Sheet: https://download.microsoft.com/download/2/1/2/2122f0b9-0
 - `code .` = Abrir VSCode
 
 # Comandos Git
+## Criar git
+- `git clone` = copiar projeto do Github
+- `git init` = criar novo do zero
+
+## Status
 - `git status` = Status atual
 - `git log` = Mostrar histórico de commits com seus hashes (código de identificação)
 
+## Adicionar em untracked(U) / modified(M) --> staged(A)
+- `git add <nome do arquivo>`
+
+## Retirar do staged (A) --> untracked(U) / modified(M)
 - `git rm --cached <nome do arquivo>` = Retirar o arquivo de staged (com git add)
-- `git restore ...` = Retorna à última versão do arquivo
 - `git restore --staged ...` = Retira documentos staged (com git add) e se torna untracked novamente
 
+## Comprometer staged (A) --> repository
 - `git commit -m "mensagem"` = Salvar no git local a versão criando um hash
 - `git commit --amend` = Reescrever última mensagem do commit
-- `git checkout (hash do commit)` = Ver outra versão daquele commit através so hash
 
+## Configurar repositório remoto
+- `git remote -v` = verifica os repositórios possíveis apontados
+- `git remote add origin <new_repository_url>` = substitui repositório para o qual seu projeto aponta. Ex: https://github.com/your_username/new_repo.git
+- `git remote add new-remote <new_repository_url>` = adiciona novo destino de repositório
+
+## Repositório local --> Github
+- `git push` = envia ao github original
+- `git push -u origin <branch_name>` = (-u: upstream)
+- `git push new-remote <branch_name>` = envia para novo destino
+- `git push -f origin <branch_name>`= (-f: force) novo repositório já tem commits, e você precisa forçar mudanças, sobrescrevendo histórico.
+
+## Branches
 - `git branch`= Ver o nome das ramificações do projeto
 - `git checkout <nome do branch>` = Mudar para outra branch
 
+## Histórico e recuperação
 - `git log --follow <nome_do_arquivo>` = ver histórico de o código hash com datas e usuários
+- `git checkout <hash do commit>` = Ver outra versão daquele commit através so hash
 - `git checkout <hash_do_commit> -- <nome_do_arquivo>` = recuperar arquivo específico para versão do hash indicado
+- `git restore ...` = Retorna à última versão do arquivo
 
 
-# Mostrar arquivos ocultos VSCode
-- vá em Settings 
-- Busque pelo menu de Exclude 
-- Escolha os arquivos que você queiraver/ocultar arquivos ocultos (.git, por exemplo)
+
 
 
 # Padrões de Commits: 
