@@ -60,7 +60,8 @@ c. Escolha os arquivos que você queira ver/ocultar arquivos ocultos (.git, por 
 - `poetry shell`
 
 ### 4.3. Git ignore
-- Gere o arquivo `.gitignore` e coloque os arquivos que não serão adicionados ao Git. Sugestões: https://www.toptal.com/developers/gitignore/api/python
+- Gere o arquivo <span style="background-color:rgba(235, 235, 139, 0.55)">.gitignore</span> e coloque os arquivos que não serão adicionados ao Git. Sugestões: https://www.toptal.com/developers/gitignore/api/python
+- Sugestões: .venv e outros arquivos de interesse.
 
 
 ### Repositório github
