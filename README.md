@@ -12,12 +12,15 @@ Este é um passo a passo para de utilização de comandos Git, realizar versiona
 ### 0.4. Configurar SSH do Git Hub
 Fonte: https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Workshop%20-%20Git%20e%20Github/Aula_02
 
-
-### 0.4. Configurar versões de Python
+### 0.5. Configurar versões de Python
 - `pyenv versions`: verificar versões instaladas
 - `pyenv install <versão>`: instalar versão de python
 - `pyenv global <versão>`: configurar versão global de python para todos Projetos
 - `pip freeze | grep -v "^-e" | xargs pip uninstall -y`: limpa o pip list
+
+### 0.6 Instalar Docker
+
+
 
 ## `SETUP DO PROJETO`
 ## 1. No terminal Bash (caso seja a primeira vez)
@@ -60,14 +63,25 @@ c. Escolha os arquivos que você queira ver/ocultar arquivos ocultos (.git, por 
 - `poetry shell`
 
 ### 4.3. Git ignore
-- Gere o arquivo <span style="background-color:rgba(235, 235, 139, 0.55)">.gitignore</span> e coloque os arquivos que não serão adicionados ao Git. Sugestões: https://www.toptal.com/developers/gitignore/api/python
+- Gere o arquivo <span style="background-color:rgba(235, 235, 139, 0.55)">.gitignore</span> e coloque os arquivos que não serão adicionados ao Git. 
 - Sugestões: .venv e outros arquivos de interesse.
+- Lista de Sugestões: https://www.toptal.com/developers/gitignore/api/python
 
+## 5. Docker
+- Criar o <span style="background-color:rgba(235, 235, 139, 0.55)">Dockerfile</span> para automatizar a configuração do computador.
+- Criar o <span style="background-color:rgba(235, 235, 139, 0.55)">.dockerignore</span> para o docker ignorar arquivos ao copiar.
 
+### 5.1. Código de arquivo Dockerfile
+FROM python:3.12 
+RUN pip install poetry
+COPY . /src
+WORKDIR /src
+RUN poetry install
+EXPOSE 8501
+ENTRYPOINT ["poetry","run","streamlit","run","<file.py>","--server.port=8501","--server.address=0.0.0.0"]
 
-
-
-
+### 5.2. Build Docker
+- `docker build -t <nome_da_imagem>`
 
 
 # Comandos bash/powershell/linux
