@@ -52,17 +52,21 @@ c. Escolha os arquivos que você queira ver/ocultar arquivos ocultos (.git, por 
 
 ## 4. No Terminal do VSCode 
 - Alterar terminal de PowerShell para Bash, caso já não esteja.
-
-### 4.1. Configurar pyenv local
 - `pyenv local <versão>`: para configurar a versão python da pasta, criando o arquivo <span style="background-color:rgba(235, 235, 139, 0.55)">.python-version</span> 
-- escolher a versão mais moderna da biblioteca que você quer trabalhar
+-- OBS: escolher a versão mais moderna da biblioteca que você quer trabalhar
 
-### 4.2. Configurar poetry
+### 4.a. Configurar pyenv local
+
+- `python -m venv .venv`: utiliza o comando python "-m" (módulo) ".venv".
+- `source .venv/Scripts/activate`: em bash (não powershell)
+- Assim aparecerá venv no terminal.
+
+### 4.b. Configurar poetry
 - `poetry init`: cria o arquivo <span style="background-color:rgba(235, 235, 139, 0.55)">pyproject.toml</span> e a pasta <span style="background-color:rgba(235, 235, 139, 0.55)">.venv</span>'
 - `poetry env use <versão python do pyenv local>`
 - `poetry shell`
 
-### 4.3. Git ignore
+### 4.2. Git ignore
 - Gere o arquivo <span style="background-color:rgba(235, 235, 139, 0.55)">.gitignore</span> e coloque os arquivos que não serão adicionados ao Git. 
 - Sugestões: .venv e outros arquivos de interesse.
 - Lista de Sugestões: https://www.toptal.com/developers/gitignore/api/python
