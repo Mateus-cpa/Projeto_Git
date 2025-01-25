@@ -55,13 +55,13 @@ c. Escolha os arquivos que você queira ver/ocultar arquivos ocultos (.git, por 
 - `pyenv local <versão>`: para configurar a versão python da pasta, criando o arquivo <span style="background-color:rgba(235, 235, 139, 0.55)">.python-version</span> 
 -- OBS: escolher a versão mais moderna da biblioteca que você quer trabalhar
 
-### 4.a. Configurar pyenv local
+### 4.a. Ativar ambiente virtual com pyenv
 
 - `python -m venv .venv`: utiliza o comando python "-m" (módulo) ".venv".
 - `source .venv/Scripts/activate`: em bash (não powershell)
 - Assim aparecerá venv no terminal.
 
-### 4.b. Configurar poetry
+### 4.b. Ativar ambiente virtual com poetry
 - `poetry init`: cria o arquivo <span style="background-color:rgba(235, 235, 139, 0.55)">pyproject.toml</span> e a pasta <span style="background-color:rgba(235, 235, 139, 0.55)">.venv</span>'
 - `poetry env use <versão python do pyenv local>`
 - `poetry shell`
