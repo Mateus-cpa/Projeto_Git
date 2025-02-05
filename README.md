@@ -58,7 +58,10 @@ c. Escolha os arquivos que você queira ver/ocultar arquivos ocultos (.git, por 
 ### 4.a. Ativar ambiente virtual com pyenv
 
 - `python -m venv .venv`: utiliza o comando python "-m" (módulo) ".venv".
-- `source .venv/Scripts/activate`: em bash (não powershell)
+Conforme o terminal:
+    - BASH: `source <nome_do_ambiente>/Scripts/activate`
+    - CMD: `<nome_do_ambiente>/Scripts/activate.bat`
+    - POWERSHELL: `<nome_do_ambiente>/Scripts/activate.ps1`
 - Assim aparecerá venv no terminal.
 
 ### 4.b. Ativar ambiente virtual com poetry
