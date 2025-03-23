@@ -7,6 +7,7 @@
 
 
 ### 5.1. Código de arquivo Dockerfile
+```
 FROM python:3.12 
 RUN pip install poetry
 COPY . /src
@@ -14,6 +15,7 @@ WORKDIR /src
 RUN poetry install
 EXPOSE 8501
 ENTRYPOINT ["poetry","run","streamlit","run","<streamlit_file.py>","--server.port=8501","--server.address=0.0.0.0"]
+```
 
 ### 5.2. Build Docker
 - `docker build --no-cache -t <nome_da_imagem> .` (às vezes pede que seja executado como administrador)
