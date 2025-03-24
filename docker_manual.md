@@ -5,8 +5,10 @@
 - Criar o <span style="background-color:rgba(235, 235, 139, 0.55)">Dockerfile</span> para automatizar a configuração do computador.
 - Criar o <span style="background-color:rgba(235, 235, 139, 0.55)">.dockerignore</span> para o docker ignorar arquivos ao copiar.
 
+### 5.1. Listar bibliotecas necessárias
+`pip freeze > requirements.txt`
 
-### 5.1. Código de arquivo Dockerfile
+### 5.2. Código de arquivo Dockerfile
 ```
 FROM python:3.12 
 RUN pip install poetry
@@ -17,7 +19,7 @@ EXPOSE 8501
 ENTRYPOINT ["poetry","run","streamlit","run","<streamlit_file.py>","--server.port=8501","--server.address=0.0.0.0"]
 ```
 
-### 5.2. Build Docker
+### 5.3. Build Docker
 1. Contruir a imagem
 `docker build --no-cache -t <nome_da_imagem> .`
 Às vezes pede que seja executado como administrador
