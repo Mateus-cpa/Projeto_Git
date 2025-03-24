@@ -74,7 +74,8 @@ Conforme o terminal:
 - Sugestões: .venv e outros arquivos de interesse.
 - Lista de Sugestões: https://www.toptal.com/developers/gitignore/api/python
 
-## 5. [Docker](https://github.com/Mateus-cpa/Projeto_Git/blob/master/docker_manual.md)
+## 5. Deploy
+A seguir confira o roteiro de deploy através do [Docker](https://github.com/Mateus-cpa/Projeto_Git/blob/master/docker_manual.md)
 
 
 
