@@ -18,12 +18,14 @@ ENTRYPOINT ["poetry","run","streamlit","run","<streamlit_file.py>","--server.por
 ```
 
 ### 5.2. Build Docker
-- `docker build --no-cache -t <nome_da_imagem> .` (às vezes pede que seja executado como administrador)
+1. Contruir a imagem
+`docker build --no-cache -t <nome_da_imagem> .`
+Às vezes pede que seja executado como administrador
+- --`no-cache` é opcional
 
-
-- fazer o push do repositório
-- no git bash: 
---docker build -t <nome_da_imagem_docker>
--- docker run -d -p <porta> --name <container> <imagem>
+2. Descompactar a imagem
+`docker run -d -p 8501:8501 --name <container> <imagem>`
+- -d = detachment = não segura o terminal
+- 8501:8501 pede para comunicar porta do computador 8501 com a do container
 
 [Principal](https://github.com/Mateus-cpa/Projeto_Git/blob/master/README.md)
