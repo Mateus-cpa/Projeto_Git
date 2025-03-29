@@ -8,7 +8,7 @@
 ### 5.1. Listar bibliotecas necessárias
 `pip freeze > requirements.txt`
 
-### 5.2. Código de arquivo Dockerfile
+### 5.2.a Código de arquivo Dockerfile
 ```
 FROM python:3.12 
 RUN pip install poetry
@@ -17,6 +17,12 @@ WORKDIR /src
 RUN poetry install
 EXPOSE 8501
 ENTRYPOINT ["poetry","run","streamlit","run","<streamlit_file.py>","--server.port=8501","--server.address=0.0.0.0"]
+```
+
+### 5.2.b. Copiar do poetry
+```
+COPY pyproject.toml poetry.lock /app/
+RUN pip install poetry
 ```
 
 ### 5.3. Build Docker
