@@ -21,8 +21,21 @@ ENTRYPOINT ["poetry","run","streamlit","run","<streamlit_file.py>","--server.por
 
 ### 5.2.b. Copiar do poetry
 ```
+FROM python:3.13.0-slim-buster
+
+WORKDIR /app
+
 COPY pyproject.toml poetry.lock /app/
+
 RUN pip install poetry
+ENV POETRY_NO_CACHE=1
+ENV POETRY_VIRTUALENVS_IN_PROJECT=true
+
+RUN poetry install --no-root
+
+COPY . /app/
+
+CMD ["poetry", "run", "python", "seu_script.py"]
 ```
 
 ### 5.3. Build Docker
