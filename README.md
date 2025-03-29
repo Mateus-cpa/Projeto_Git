@@ -69,6 +69,11 @@ Conforme o terminal:
 - `poetry env use <versão python do pyenv local>`
 - `poetry shell`
 - `poetry add <package>`: adiciona pacote ao `pyproject.toml` e os instala.
+- `poetry install` para verificar o que foi instalado
+- `pip freeze`: para ver as dependências e versões instaladas.
+- Abra a paleta de comandos (Ctrl+Shift+P ou Cmd+Shift+P).
+- Digite "Python: Select Interpreter" e selecione a opção.
+- Escolha o interpretador que corresponde ao seu ambiente virtual Poetry.
 
 ### 4.2. Git ignore
 - Gere o arquivo <span style="background-color:rgba(235, 235, 139, 0.55)">.gitignore</span> e coloque os arquivos que não serão adicionados ao Git. 
