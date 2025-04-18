@@ -64,7 +64,7 @@ Conforme o terminal:
     - POWERSHELL: `<nome_do_ambiente>/Scripts/activate.ps1`
 - Assim aparecerá venv no terminal.
 
-### 4.b. Ativar ambiente virtual com [poetry](https://python-poetry.org/docs/cli/)
+### 4.b. Ativar ambiente virtual com [poetry](https://github.com/Mateus-cpa/Projeto_Git/blob/master/poetry.md)
 - `poetry init`: cria o arquivo <span style="background-color:rgba(235, 235, 139, 0.55)">pyproject.toml</span> e a pasta <span style="background-color:rgba(235, 235, 139, 0.55)">.venv</span>'
 - `poetry env use <versão python do pyenv local>`
 - `poetry shell`
@@ -74,6 +74,7 @@ Conforme o terminal:
 - Abra a paleta de comandos (Ctrl+Shift+P ou Cmd+Shift+P).
 - Digite "Python: Select Interpreter" e selecione a opção.
 - Escolha o interpretador que corresponde ao seu ambiente virtual Poetry.
+- Página do [Poetry](https://python-poetry.org/docs/cli/)
 
 ### 4.2. Git ignore
 - Gere o arquivo <span style="background-color:rgba(235, 235, 139, 0.55)">.gitignore</span> e coloque os arquivos que não serão adicionados ao Git. 
