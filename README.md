@@ -139,6 +139,7 @@ Powershell Cheat Sheet: https://download.microsoft.com/download/2/1/2/2122f0b9-0
 - `git remote -v` = verifica os repositórios possíveis apontados
 - `git remote add origin <new_repository_url>` = substitui repositório para o qual seu projeto aponta. Ex: https://github.com/your_username/new_repo.git
 - `git remote add new-remote <new_repository_url>` = adiciona novo destino de repositório
+- `git remote set-url <nome do repositorio ex: origin> <novo ssh>` = substitui url apontado no destino do repositorio. Originalmente origin.
 
 ## Repositório local --> Github
 - `git push` = envia ao github original
