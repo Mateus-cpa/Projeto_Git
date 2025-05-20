@@ -50,3 +50,45 @@ CMD ["poetry", "run", "python", "seu_script.py"]
 - 8501:8501 pede para comunicar porta do computador 8501 com a do container
 
 [Principal](https://github.com/Mateus-cpa/Projeto_Git/blob/master/README.md)
+
+---
+
+🔻 1. Parar todos os containers em execução
+
+bash
+docker stop (docker ps -aq)
+“`
+
+—
+
+🗑️ 2. *Remover todos os containers (parados ou em execução)*
+
+“`bash
+docker rm(docker ps -aq)
+
+
+---
+
+🧹 3. Remover todas as imagens Docker
+
+bash
+docker rmi $(docker images -q)
+
+
+---
+
+💣 4. Remover volumes não usados (opcional)
+
+bash
+docker volume prune -f
+
+
+---
+
+🔄 5. Remover tudo de uma vez (containers, imagens, volumes, redes)
+
+bash
+docker system prune -a --volumes -f
+
+
+> Atenção: Esse último comando é o mais agressivo. Ele remove tudo que não estiver em uso: containers, imagens, volumes e redes.
